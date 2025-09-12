@@ -1,0 +1,49 @@
+.wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.notify {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: transparent;
+    border-radius: 20px;
+    cursor: pointer;
+    color: #6b6b6b;
+
+    &:hover .notify__icon {
+        color: black;
+    }
+
+    .notify__icon {
+        font-size: 2rem;
+        line-height: 1;
+    }
+
+    .notify__badge {
+        position: absolute;
+        top: 0;
+        right: 2.5px;
+
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+
+        width: 18px;
+        height: 18px;
+        padding: 0 6px;
+        border-radius: 50%;
+        background: #ff4545;
+        color: #fff;
+
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 1;
+    }
+}

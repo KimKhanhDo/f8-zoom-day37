@@ -1,0 +1,318 @@
+.page {
+    padding: 24px 16px 40px;
+}
+
+.hero {
+    background: linear-gradient(135deg, #7c3aed 0%, #a855f7 50%, #ec4899 100%);
+    border-radius: 24px;
+    padding: 28px;
+    color: #fff;
+    box-shadow: 0 8px 24px rgba(124, 58, 237, 0.18);
+    margin-bottom: 28px;
+}
+
+.heroContent {
+    display: grid;
+    gap: 10px;
+}
+
+.title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1.15;
+}
+
+.desc {
+    font-size: 1.6rem;
+    opacity: 0.95;
+}
+
+.actions {
+    margin-top: 8px;
+}
+
+.btnHero {
+    display: inline-block;
+    outline: none;
+    height: 44px;
+    padding: 0 16px;
+
+    border-radius: 999px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+
+    background: transparent;
+    border: 1px solid #fff;
+    box-shadow: 0 6px 16px rgba(54, 35, 55, 0.3);
+    cursor: pointer;
+    transition: all 0.06s ease;
+
+    &:hover {
+        background: #fff;
+        color: #7c3aed;
+    }
+}
+
+.section {
+    margin-top: 24px;
+}
+
+.card {
+    background: #e5e2e2;
+    border-radius: 16px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+    padding: 20px;
+}
+
+.cardTitle {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.list {
+    margin: 0;
+
+    li {
+        font-size: 1.6rem;
+        line-height: 1.6;
+        margin: 4px 0;
+
+        b {
+            font-weight: 600;
+        }
+    }
+}
+
+/* ===== Course Assign Modal ===== */
+.assignModal {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 20px;
+    align-items: stretch;
+    padding: 22px;
+
+    border-radius: 16px;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.18);
+
+    width: min(80vw, calc(100vw - 40px));
+    max-height: calc(100vh - 120px);
+    overflow: auto;
+
+    background: #fff;
+    border: 1px solid rgba(124, 58, 237, 0.12);
+
+    transform: scale(0.9);
+    opacity: 0;
+    transition: transform 300ms cubic-bezier(0.2, 0.8, 0.2, 1),
+        opacity 300ms ease;
+
+    &.active {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    &.closing {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+}
+
+.assignIntro,
+.assignPanel {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 18px;
+    box-shadow: 0 10px 24px rgba(17, 24, 39, 0.06);
+}
+
+.assignHeading {
+    font-size: clamp(20px, 3vw, 28px);
+    font-weight: 700;
+}
+
+.assignSub {
+    line-height: 1.4;
+    margin: 12px 0 20px;
+    color: #6b7280;
+}
+
+.assignBullets {
+    display: grid;
+    gap: 14px;
+
+    li {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: max-content 1fr;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 12px;
+        border-radius: 12px;
+        background: #fafafa;
+        border: 1px dashed rgba(124, 58, 237, 0.25);
+    }
+}
+
+/* Form */
+.assignForm {
+    display: grid;
+    gap: 14px;
+}
+
+.assignRow2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.assignField {
+    display: grid;
+    gap: 6px;
+
+    label {
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    input,
+    select,
+    textarea {
+        margin-top: 4px;
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        padding: 10px 12px;
+        outline: none;
+        min-height: 40px;
+        font: 1.4rem;
+        line-height: 1.2;
+        background: #fff;
+
+        &:focus {
+            border-color: #a78bfa;
+            box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.25);
+        }
+    }
+
+    textarea {
+        resize: vertical;
+    }
+}
+
+.assignChips,
+.assignChecks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    label {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 0 8px;
+        background: #fff;
+        cursor: pointer;
+
+        input {
+            margin: 0;
+        }
+    }
+}
+
+.assignConsent {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content 1fr;
+    align-items: start;
+    gap: 8px;
+    font-size: 14px;
+
+    input {
+        margin-top: 3px;
+    }
+}
+
+.assignActions {
+    display: grid;
+    gap: 10px;
+}
+
+.assignBtnPrimary {
+    height: 44px;
+    border: 0;
+    border-radius: 999px;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(90deg, #7c3aed, #ec4899);
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.9;
+    }
+}
+
+.assignBtnGhost {
+    height: 44px;
+    border-radius: 999px;
+    border: 1px solid #e5e7eb;
+    background: #fff;
+    font-weight: 700;
+    color: #374151;
+    cursor: pointer;
+
+    &:hover {
+        background: #fafafa;
+    }
+}
+
+/* ======== Custom Overlay & Modal (demo) ======== */
+
+.custom-overlay {
+    background: rgba(215, 176, 241, 0.6);
+    backdrop-filter: blur(4px);
+    animation: overlayFadeIn 240ms ease;
+}
+
+.custom-overlay.closing {
+    animation: overlayFadeOut 300ms ease forwards;
+}
+
+.custom-modal {
+    max-height: 100vh;
+    overflow: auto;
+    background: #fff;
+    border-radius: 18px;
+    padding: 22px;
+    box-shadow: 0 16px 40px rgba(2, 6, 23, 0.2);
+    animation: modalPopIn 240ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@keyframes overlayFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes overlayFadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes modalPopIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}

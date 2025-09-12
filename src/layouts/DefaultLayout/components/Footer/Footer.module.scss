@@ -1,0 +1,114 @@
+.footer {
+    position: relative;
+    z-index: 99;
+    background: #222429;
+    color: #cfd3d8;
+}
+
+.inner {
+    width: calc(100% - 88px);
+    margin-left: 88px;
+
+    padding: 60px 40px 40px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 2fr;
+    justify-content: start;
+
+    gap: 32px;
+}
+
+.colBrand {
+    display: grid;
+    gap: 16px;
+}
+
+.brandRow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+}
+
+.brandText {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.contactList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 8px;
+    li {
+        font-size: 1.5rem;
+        line-height: 1.5;
+    }
+    strong {
+        color: #e4e7eb;
+        font-weight: 600;
+    }
+}
+
+.col {
+    display: grid;
+    gap: 12px;
+}
+
+.title {
+    font-size: 1.7rem;
+    color: #fff;
+    font-weight: 700;
+}
+
+.linkList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 10px;
+    a {
+        color: #cfd3d8;
+        text-decoration: none;
+        font-size: 1.5rem;
+        &:hover {
+            color: #fff;
+        }
+    }
+}
+
+.colCompany {
+    display: grid;
+    gap: 14px;
+}
+
+.infoList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 8px;
+    li {
+        font-size: 1.5rem;
+        line-height: 1.6;
+    }
+    strong {
+        color: #e4e7eb;
+        font-weight: 600;
+    }
+}
+
+.copy {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    border-top: 1px solid #2f3137;
+    color: #aeb4bb;
+    font-size: 1.4rem;
+}

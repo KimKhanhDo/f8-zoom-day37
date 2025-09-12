@@ -1,0 +1,75 @@
+/* Lớp khung phủ toàn màn hình */
+.modal,
+.overlayBase {
+    position: fixed;
+    inset: 0;
+}
+
+.overlayDefault {
+    background: rgba(0, 0, 0, 0.6);
+    animation: overlayIn 0.15s ease;
+}
+
+.modal {
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contentBase {
+    position: relative;
+    z-index: 1;
+}
+
+.content {
+    background: #fff;
+    // border-radius: 16px;
+    // box-shadow: 0 16px 48px rgba(0, 0, 0, 0.18);
+
+    // width: min(80vw, calc(100vw - 40px));
+    // max-height: calc(100vh - 120px);
+    // overflow: auto;
+    // animation: popIn 0.18s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.body {
+    padding: 20px 10px;
+}
+
+.content > button {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+
+    transition: background 0.15s ease, transform 0.06s ease,
+        box-shadow 0.15s ease;
+
+    &:hover {
+        color: #ff5d2e;
+    }
+}
+
+// @keyframes overlayIn {
+//     from {
+//         opacity: 0;
+//     }
+//     to {
+//         opacity: 1;
+//     }
+// }
+
+// @keyframes popIn {
+//     from {
+//         opacity: 0;
+//         transform: translateY(4px) scale(0.98);
+//     }
+//     to {
+//         opacity: 1;
+//         transform: translateY(0) scale(1);
+//     }
+// }

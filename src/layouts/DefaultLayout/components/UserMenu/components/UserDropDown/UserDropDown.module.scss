@@ -1,0 +1,93 @@
+/* Panel */
+.dropdown {
+    position: absolute;
+    top: calc(100% + 4px);
+    right: 0;
+    min-width: 260px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+    padding: 26px 24px 10px 24px;
+    z-index: 40;
+}
+
+/* Header */
+.header {
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.avatarWrap {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+
+    outline: 4px solid #ffd54f;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* icon crown */
+.crown {
+    position: absolute;
+    top: -14px;
+    right: -8px;
+    width: 22px;
+    height: 22px;
+    transform: rotate(40deg);
+
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23ffd54f' d='M3 18h18l-1.5-9-4.5 3-3-6-3 6-4.5-3L3 18z'/%3E%3C/svg%3E")
+        no-repeat center / contain;
+}
+
+.info {
+    display: grid;
+    gap: 4px;
+}
+
+.name {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #292929;
+}
+
+.username {
+    margin-top: 8px;
+    font-size: 1.4rem;
+    color: #757575;
+}
+
+/* Divider */
+.divider {
+    height: 1px;
+    background: #eee;
+    margin: 8px 0;
+}
+
+/* Menu */
+.menu {
+    display: grid;
+}
+
+.item {
+    font-size: 1.4rem;
+    color: #666;
+    display: block;
+    padding: 10px 0;
+    cursor: pointer;
+
+    &:hover {
+        color: #292929;
+    }
+}

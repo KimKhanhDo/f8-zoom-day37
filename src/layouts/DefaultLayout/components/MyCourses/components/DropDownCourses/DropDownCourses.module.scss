@@ -1,0 +1,109 @@
+.dropdown {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    width: 380px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+    padding: 16px;
+    z-index: 30;
+}
+
+/* Header */
+.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.title {
+    font-size: 1.8rem;
+    color: #222;
+}
+
+.viewAll {
+    padding: 8px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #ff5d2e;
+    text-decoration: none;
+    border-radius: 4px;
+
+    &:hover {
+        background: #f7f7f7;
+    }
+}
+
+.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.item {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 12px;
+    align-items: start;
+    padding: 12px 6px 6px 6px;
+    border-radius: 12px;
+
+    &:hover {
+        background: #f1efef;
+    }
+}
+
+/* (gradient + logo) */
+.thumb {
+    width: 120px;
+    height: 72px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #6b7bff 0%, #8a2be2 35%, #ff6b6b 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 700;
+
+    .thumb__logo {
+        opacity: 0.92;
+    }
+}
+
+/* Course Info */
+.info {
+    margin-top: 8px;
+    display: grid;
+    gap: 6px;
+}
+
+.name {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #2a2a2a;
+}
+
+.meta {
+    font-size: 1.2rem;
+    color: #7c7c7c;
+}
+
+/* Progress bar */
+.progress {
+    margin-top: 4px;
+    height: 8px;
+    width: 100%;
+    background: #e6e6e6;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.progress__bar {
+    height: 100%;
+    background: #ff5d2e;
+    border-radius: 6px 0 0 6px;
+}
