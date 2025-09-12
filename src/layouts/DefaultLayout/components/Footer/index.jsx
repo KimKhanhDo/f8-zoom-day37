@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import styles from './Footer.module.scss';
+import appLogo from '../../../../assets/images/f8-logo.png';
 
 function Footer() {
     return (
@@ -13,7 +14,7 @@ function Footer() {
                     >
                         <img
                             className={styles.logo}
-                            src="/src/assets/images/f8-logo.png"
+                            src={appLogo}
                             alt="F8"
                         />
                         <span className={styles.brandText}>

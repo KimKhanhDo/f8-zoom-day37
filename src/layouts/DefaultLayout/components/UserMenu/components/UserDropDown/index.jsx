@@ -1,10 +1,5 @@
 import styles from './UserDropDown.module.scss';
-
-const user = {
-    name: 'Khánh Đỗ',
-    username: '@dokimkhanh',
-    avatar: '/src/assets/images/f8-logo.png',
-};
+import appLogo from '../../../../../../assets/images/f8-logo.png';
 
 const MENU_TOP = [
     { label: 'Viết blog', href: '#' },
@@ -25,14 +20,14 @@ export default function UserDropDown() {
                 <div className={styles.avatarWrap}>
                     <img
                         className={styles.avatar}
-                        src={user.avatar}
-                        alt={user.name}
+                        src={appLogo}
+                        alt="Khánh Đỗ"
                     />
                     <span className={styles.crown} />
                 </div>
                 <div className={styles.info}>
-                    <div className={styles.name}>{user.name}</div>
-                    <div className={styles.username}>{user.username}</div>
+                    <div className={styles.name}>Khánh Đỗ</div>
+                    <div className={styles.username}>@dokimkhanh</div>
                 </div>
             </div>
 

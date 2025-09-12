@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import styles from './Profile.module.scss';
-
-const DEFAULT_AVATAR = '/src/assets/images/avatar_placeholde.png';
+import DEFAULT_AVATAR from '../../assets/images/avatar_placeholde.png';
 
 function Profile() {
     const [previewUrl, setPreviewUrl] = useState(null);

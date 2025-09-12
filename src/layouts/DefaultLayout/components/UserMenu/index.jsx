@@ -2,8 +2,7 @@ import { useEffect, useState } from 'react';
 
 import styles from './UserMenu.module.scss';
 import UserDropDown from './components/UserDropDown';
-
-const AVATAR_SRC = '/src/assets/images/f8-logo.png';
+import appLogo from '../../../../assets/images/f8-logo.png';
 
 export default function UserMenu() {
     const [isOpen, setIsOpen] = useState(false);
@@ -33,7 +32,7 @@ export default function UserMenu() {
                 <span className={styles.avatarWrap}>
                     <img
                         className={styles.userMenu__avatar}
-                        src={AVATAR_SRC}
+                        src={appLogo}
                         alt="Avatar"
                     />
                     <span className={styles.crown} />

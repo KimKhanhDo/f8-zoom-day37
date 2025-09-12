@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import styles from './AppLogo.module.scss';
+import appLogo from '../../../../assets/images/f8-logo.png';
 
 function AppLogo() {
     return (
@@ -10,7 +11,7 @@ function AppLogo() {
             >
                 <img
                     className={styles.brandIcon}
-                    src="/src/assets/images/f8-logo.png"
+                    src={appLogo}
                     alt="Học Lập Trình Để Đi Làm"
                 />
             </Link>
