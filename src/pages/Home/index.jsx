@@ -137,7 +137,6 @@ function CourseCard({ title, img, sub, price, oldPrice, stats }) {
                 className={styles.card__thumb}
                 src={img}
                 alt={title}
-                loading="lazy"
             />
             <div className={styles.card__body}>
                 <h4 className={styles.card__title}>{title}</h4>
@@ -163,7 +162,6 @@ function FreeCourseCard({ title, img, sub, meta }) {
                 className={styles.free__thumb}
                 src={img}
                 alt={title}
-                loading="lazy"
             />
             <div className={styles.free__body}>
                 <h4 className={styles.free__title}>{title}</h4>
@@ -185,7 +183,6 @@ function PostCard({ title, img, author, time }) {
                 className={styles.post__thumb}
                 src={img}
                 alt={title}
-                loading="lazy"
             />
             <div className={styles.post__body}>
                 <h4 className={styles.post__title}>{title}</h4>
@@ -206,7 +203,6 @@ function VideoCard({ title, img, duration }) {
                     className={styles.video__thumb}
                     src={img}
                     alt={title}
-                    loading="lazy"
                 />
                 <span className={styles.video__badge}>{duration}</span>
             </div>
@@ -249,7 +245,6 @@ function Home() {
                         className={styles.hero__img}
                         src="https://files.fullstack.edu.vn/f8-prod/banners/37/66b5a6b16d31a.png"
                         alt="JavaScript Pro Banner"
-                        loading="lazy"
                     />
                 </div>
             </section>

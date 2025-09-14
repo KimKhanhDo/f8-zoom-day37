@@ -9,15 +9,14 @@ export default function GoToTop() {
     const [visible, setVisible] = useState(false);
 
     useEffect(() => {
-        const onScroll = () => {
+        const handleScroll = () => {
             console.log(window.scrollY);
             setVisible(window.scrollY >= THRESHOLD);
         };
 
-        onScroll();
-        window.addEventListener('scroll', onScroll);
+        window.addEventListener('scroll', handleScroll);
 
-        return () => window.removeEventListener('scroll', onScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
     // Smooth scroll to top
