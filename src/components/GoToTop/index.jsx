@@ -10,7 +10,6 @@ export default function GoToTop() {
 
     useEffect(() => {
         const handleScroll = () => {
-            console.log(window.scrollY);
             setVisible(window.scrollY >= THRESHOLD);
         };
 

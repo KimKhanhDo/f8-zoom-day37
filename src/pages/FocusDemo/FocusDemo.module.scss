@@ -1,0 +1,146 @@
+.page {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.header {
+    display: grid;
+    gap: 10px;
+}
+
+.title {
+    font-size: 4rem;
+    font-weight: 600;
+    color: #111827;
+    line-height: 1.25;
+}
+
+.sub {
+    font-size: 1.5rem;
+    color: #6b7280;
+}
+
+.toolbar {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tbBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 16px;
+    border-radius: 12px;
+    border: 1px solid transparent;
+
+    color: #111827;
+    font-weight: 600;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 12px rgba(17, 24, 39, 0.08);
+}
+
+.tbPrimary {
+    background: #ff5d2e;
+    color: #fff;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.9;
+    }
+}
+
+.tbNeutral {
+    background: #111827;
+    color: #fff;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.9;
+    }
+}
+.tbGhost {
+    background: #fff;
+    color: #111827;
+    border-color: rgba(17, 24, 39, 0.12);
+    cursor: pointer;
+
+    &:hover {
+        background: #f3f5f6;
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+
+    min-height: 400px;
+    margin-top: 30px;
+    padding: 30px 40px;
+    background: #fff;
+    border: 1px solid rgba(17, 24, 39, 0.06);
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(31, 41, 55, 0.07);
+}
+
+/* Content */
+.grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 30px;
+}
+
+.heading {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #111827;
+    line-height: 1.25;
+}
+
+/* Left: inputs */
+.left,
+.right {
+    display: grid;
+    gap: 20px;
+}
+
+.counterBox {
+    height: 106px;
+    display: grid;
+    gap: 6px;
+    border: 1px dashed rgba(17, 24, 39, 0.12);
+    border-radius: 12px;
+    padding: 20px;
+    background: #fafafa;
+}
+
+.counterTitle {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #111827;
+}
+
+.counterValue {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #4b5563;
+    line-height: 1.1;
+}
+
+.notes {
+    display: grid;
+    gap: 6px;
+    padding-left: 18px;
+    list-style: disc;
+
+    li {
+        font-size: 1.3rem;
+        color: #6b7280;
+    }
+}

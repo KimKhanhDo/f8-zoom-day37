@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 import styles from './UserMenu.module.scss';
 import UserDropDown from './components/UserDropDown';
-import appLogo from '../../../../assets/images/f8-logo.png';
+import appLogo from '@/assets/images/f8-logo.png';
 
 export default function UserMenu() {
     const [isOpen, setIsOpen] = useState(false);

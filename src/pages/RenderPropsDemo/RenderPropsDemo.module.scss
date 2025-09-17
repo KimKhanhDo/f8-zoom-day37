@@ -1,0 +1,107 @@
+.page {
+    padding: 32px;
+}
+
+.heading {
+    font-size: 4rem;
+    font-weight: 600;
+    color: #111827;
+    line-height: 1.25;
+}
+
+.subheading {
+    font-size: 1.5rem;
+    color: #6b7280;
+    margin: 8px 0 32px;
+}
+
+.section {
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+
+    + .section {
+        margin-top: 30px;
+    }
+}
+
+/* Chỉ khi có .block bên trong mới hiển thị hộp */
+.section:has(.block) {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    padding: 26px 30px;
+}
+
+.loading {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* Data block */
+.block {
+    display: block;
+}
+
+.blockTitle {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 16px;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.item {
+    font-size: 1.4rem;
+    padding: 12px 14px;
+    background: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    color: #1f2937;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.12s ease, box-shadow 0.2s ease;
+
+    &:hover {
+        color: #ff5d2e;
+        box-shadow: 0 6px 14px rgba(51, 52, 56, 0.05);
+    }
+}
+
+/* Users */
+.name {
+    color: #ff5d2e;
+    margin-right: 8px;
+    font-weight: 700;
+    font-size: 1.4rem;
+
+    &:hover {
+        color: #ff5d2e;
+        box-shadow: 0 6px 14px rgba(51, 52, 56, 0.05);
+    }
+}
+
+.dot {
+    margin: 0 8px;
+    color: #94a3b8;
+}
+
+.email {
+    font-size: 1.3rem;
+    color: #475569;
+}
+
+.error {
+    font-size: 1.4rem;
+    color: #d32f2f;
+    font-weight: 700;
+    padding: 10px 12px;
+    background: #ffeaea;
+    border: 1px solid #ffcdd2;
+    border-radius: 10px;
+    display: inline-block;
+}

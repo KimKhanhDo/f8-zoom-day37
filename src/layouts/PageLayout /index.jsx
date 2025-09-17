@@ -1,11 +1,10 @@
 import { Outlet } from 'react-router-dom';
 
-import styles from './DefaultLayout.module.scss';
-import Footer from './components/Footer';
+import styles from './PageLayout.module.scss';
 import Header from '@/layouts/components/Header';
 import Sidebar from '@/layouts/components/Sidebar';
 
-function DefaultLayout() {
+function PageLayout() {
     return (
         <div className={styles.layout}>
             <Header />
@@ -16,10 +15,8 @@ function DefaultLayout() {
                     <Outlet />
                 </div>
             </main>
-
-            <Footer />
         </div>
     );
 }
 
-export default DefaultLayout;
+export default PageLayout;

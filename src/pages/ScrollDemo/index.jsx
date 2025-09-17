@@ -5,7 +5,7 @@ export default function ScrollDemo() {
     return (
         <div className={styles.page}>
             <header className={styles.header}>
-                <h1>Scroll Demo — GoToTop UI</h1>
+                <h2>Scroll Demo — GoToTop UI</h2>
                 <p className={styles.lead}>
                     Trang demo chứa các đoạn văn bản dài để kiểm tra giao diện
                     nút GoToTop.

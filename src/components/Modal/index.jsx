@@ -1,34 +1,54 @@
-import { useEffect, useState } from 'react';
+import {
+    forwardRef,
+    useCallback,
+    useEffect,
+    useImperativeHandle,
+    useState,
+} from 'react';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 
 import styles from './Modal.module.scss';
 
-function Modal({
-    isOpen = false,
-    children,
-    onAfterOpen,
-    onAfterClose,
-    onRequestClose,
-    overlayClassName,
-    className,
-    bodyOpenClassName = 'modal-open',
-    htmlOpenClassName = 'modal-open',
-    shouldCloseOnOverlayClick = true,
-    shouldCloseOnEsc = true,
-    closeTimeoutMS = 0,
-}) {
+function Modal(props, ref) {
+    const {
+        isOpen = false,
+        children,
+        onAfterOpen,
+        onAfterClose,
+        onRequestOpen,
+        onRequestClose,
+        overlayClassName,
+        className,
+        bodyOpenClassName = 'modal-open',
+        htmlOpenClassName = 'modal-open',
+        shouldCloseOnOverlayClick = true,
+        shouldCloseOnEsc = true,
+        closeTimeoutMS = 0,
+    } = props;
+
     const [closing, setClosing] = useState(false);
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    const handleRequestClose = () => {
+    useImperativeHandle(ref, () => ({
+        open: () => onRequestOpen(),
+        close: () => handleRequestClose(),
+        toggle: () => {
+            if (isOpen) {
+                handleRequestClose();
+            } else {
+                onRequestOpen();
+            }
+        },
+    }));
+
+    const handleRequestClose = useCallback(() => {
         setClosing(true); // bật trạng thái closing để CSS chạy animation
         setTimeout(onRequestClose, closeTimeoutMS);
-    };
+    }, [closeTimeoutMS, onRequestClose]);
 
     // ESC
     useEffect(() => {
-        if (!shouldCloseOnEsc) return;
+        if (!shouldCloseOnEsc || !isOpen) return;
 
         const onEsc = (e) => {
             if (e.key === 'Escape') handleRequestClose();
@@ -37,7 +57,7 @@ function Modal({
         document.addEventListener('keydown', onEsc);
 
         return () => document.removeEventListener('keydown', onEsc);
-    }, [shouldCloseOnEsc, onRequestClose, handleRequestClose]);
+    }, [shouldCloseOnEsc, isOpen, onRequestClose, handleRequestClose]);
 
     // use onAfterOpen
     useEffect(() => {
@@ -108,6 +128,7 @@ Modal.propTypes = {
     children: PropTypes.node.isRequired,
     onAfterOpen: PropTypes.func,
     onAfterClose: PropTypes.func,
+    onRequestOpen: PropTypes.func,
     onRequestClose: PropTypes.func,
     overlayClassName: PropTypes.string,
     className: PropTypes.string,
@@ -118,4 +139,4 @@ Modal.propTypes = {
     closeTimeoutMS: PropTypes.number,
 };
 
-export default Modal;
+export default forwardRef(Modal);

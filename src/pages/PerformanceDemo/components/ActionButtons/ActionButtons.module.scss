@@ -1,0 +1,47 @@
+.group {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px 18px;
+    border-radius: 16px;
+    border: 1px solid transparent;
+    box-shadow: 0 6px 16px rgba(17, 24, 39, 0.08);
+    color: #111827;
+
+    font-weight: 600;
+    font-size: 1.6rem;
+
+    cursor: pointer;
+    transition: transform 0.12s ease, box-shadow 0.12s ease,
+        background 0.12s ease, color 0.12s ease;
+
+    &:active {
+        transform: translateY(1px);
+    }
+}
+
+.primary {
+    background: #ff5d2e;
+    color: #fff;
+    &:hover {
+        opacity: 0.9;
+    }
+}
+
+.neutral {
+    background: #111827;
+    color: #fff;
+    &:hover {
+        opacity: 0.9;
+    }
+}

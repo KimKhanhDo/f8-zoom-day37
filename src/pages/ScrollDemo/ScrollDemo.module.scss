@@ -1,20 +1,21 @@
 .page {
-    padding-block: 36px 84px;
+    padding-block: 32px;
 }
 
 .header {
     max-width: 920px;
     margin: 0 auto 16px;
 
-    h1 {
+    h2 {
         margin: 0 0 6px;
-        font-size: 3rem;
-        letter-spacing: -0.01em;
+        font-size: 4rem;
+        font-weight: 600;
         color: #111827;
+        line-height: 1.25;
     }
 
     .lead {
-        margin: 14px 0;
+        margin: 8px 0;
         color: #6b7280;
         line-height: 1.7;
     }

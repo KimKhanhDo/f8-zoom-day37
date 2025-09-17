@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import styles from './AppLogo.module.scss';
-import appLogo from '../../../../assets/images/f8-logo.png';
+import appLogo from '@/assets/images/f8-logo.png';
 
 function AppLogo() {
     return (
@@ -15,7 +15,12 @@ function AppLogo() {
                     alt="Học Lập Trình Để Đi Làm"
                 />
             </Link>
-            <a className={styles.brandName}>Học Lập Trình Để Đi Làm</a>
+            <Link
+                to="/"
+                className={styles.brandName}
+            >
+                Học Lập Trình Để Đi Làm
+            </Link>
         </h1>
     );
 }

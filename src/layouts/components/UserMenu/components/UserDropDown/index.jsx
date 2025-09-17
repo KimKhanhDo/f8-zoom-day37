@@ -1,5 +1,5 @@
 import styles from './UserDropDown.module.scss';
-import appLogo from '../../../../../../assets/images/f8-logo.png';
+import appLogo from '@/assets/images/f8-logo.png';
 
 const MENU_TOP = [
     { label: 'Viết blog', href: '#' },

@@ -1,0 +1,64 @@
+.header {
+    display: grid;
+    gap: 6px;
+    margin-bottom: 10px;
+}
+.title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #111827;
+}
+.sub {
+    font-size: 1.6rem;
+    color: #6b7280;
+    margin: 5px 0 10px;
+}
+
+.list {
+    display: grid;
+    gap: 10px;
+}
+
+.item {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    gap: 12px;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid rgba(17, 24, 39, 0.06);
+    border-radius: 12px;
+    background: #fff;
+}
+
+.avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #e5e7eb, #f3f4f6);
+}
+
+.meta {
+    display: grid;
+    gap: 4px;
+}
+
+.name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #111827;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.email {
+    font-size: 1.3rem;
+    color: #6b7280;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.empty {
+    opacity: 0.6;
+}
