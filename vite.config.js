@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react-swc';
 import path from 'path';
@@ -8,12 +9,11 @@ export default defineConfig({
     resolve: {
         alias: {
             // Trả về đường dẫn tuyệt đối trong dự án đến thẳng src
-            // eslint-disable-next-line no-undef
-            '@': path.resolve(__dirname, './src'),
+
+            '@': path.resolve(__dirname, 'src'),
             '@components': path.resolve(
-                // eslint-disable-next-line no-undef
                 __dirname,
-                './src/layouts/DefaultLayout/components'
+                '/src/layouts/DefaultLayout/components'
             ),
         },
     },
